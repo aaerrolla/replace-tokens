@@ -3,9 +3,9 @@ Python module to replace tokens in file with properties file
 
 # Example 1
 
-$cat smaple_file.txt
+`$cat smaple_file.txt`
 
-image.name=@IMAGE.NAME@  
+`image.name=@IMAGE.NAME@  `
 dev.url=@DEV.URL@  
 smtp.replay.hostname=@SMTP.HOSTNAME@  
 pod.name=@PROJECT.NAME@-@IMAGE.NAME@  
