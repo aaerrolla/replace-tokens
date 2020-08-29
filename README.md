@@ -1,6 +1,8 @@
 # replace-tokens
 Python module to replace tokens in file with properties file
 
+NOTE : This is very raw implementation , there are very good and improved implementatoin like jinja template for solving token replacement  
+
 ### Example 1
 
 `$cat smaple_file.txt`
