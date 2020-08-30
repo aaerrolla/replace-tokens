@@ -1,4 +1,5 @@
 import sys
+import re
 import in_place
 
 
@@ -18,14 +19,15 @@ def replace_tokens(filesWithTokens, propertiesFile ):
     #TODO there are multiple issues with this implementation fix
     with in_place.InPlace(filesWithTokens) as fp:
         for line in fp:
-            flag = 0
-            for k,v in token_dict.items():
-                if k in line:
-                    flag = 1
-                    modifiedLine = line.replace(k, v)
-                    fp.write(modifiedLine)
-            if ( flag == 0 ):
-                fp.write(line)
+            # replace @token@ with {token}
+            re_line = re.sub(r"@(\w.+?)@", r"{\1}", line)
+            print(re_line)
+            replaced_line = ""
+            try:
+                replaced_line = re_line.format(**token_dict)
+            except KeyError:
+                print(KeyError.with_traceback())
+            fp.write(replaced_line)
 
 if __name__ == "__main__":
     #TODO add condition to check if required number of cmd arguments are provided 

@@ -1,9 +1,7 @@
-image.name=@nginx@
-dev.url=@http://something/index.html@
-smtp.replay.hostname=@129.23.4.4@
-pod.name=@PROJECT.NAME@-@nginx@  
-pod.name=@cat@-@IMAGE.NAME@  
-catalog.service.url=http://@192.168.2.3@/@CAT.SERVICE.ENDPOINT@
-catalog.service.url=http://@CAT.HOST@/@/catserivce/products?WSDL@
-catalog.service.host=@192.168.2.3@
-catalog.service.endpoint=@/catserivce/products?WSDL@
+image.name=nginx
+dev.url=http://something/index.html
+smtp.replay.hostname=129.23.4.4
+pod.name=cat-nginx  
+catalog.service.url=http://192.168.2.3/catserivce/products?WSDL
+catalog.service.host=192.168.2.3
+catalog.service.endpoint=catserivce/products?WSDL
