@@ -9,7 +9,7 @@ def to_dict(propertyFile):
     prop=value
     """
     token_dict = {}
-    #TODO check if file not exists
+    #TODO check if file exists
     with open(propertyFile) as file:
         return { line.split("=")[0].strip():line.split("=")[1].strip()  for line in file }
 
